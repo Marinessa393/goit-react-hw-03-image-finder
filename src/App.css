@@ -14,8 +14,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-  color: #212121;
-  background-color: #fff;
+  color: #3d1212;
+  background-color: bisque;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -52,8 +52,8 @@ img {
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
-  background-color: #3f51b5;
+  color: bisque;
+  background-color: #700778;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 }
@@ -66,7 +66,7 @@ img {
   align-items: center;
   width: 100%;
   max-width: 600px;
-  background-color: #fff;
+  background-color: bisque;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -183,11 +183,11 @@ img {
 .Button {
   padding: 8px 16px;
   border-radius: 2px;
-  background-color: #3f51b5;
+  background-color: #700778;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   display: inline-block;
-  color: #fff;
+  color: bisque;
   border: 0;
   text-decoration: none;
   cursor: pointer;
@@ -208,7 +208,10 @@ img {
 
 .Error {
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 32px;
-  color: teal;
+  margin-top: 20vh;
+  font-family: cursive;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  color: rgb(31, 93, 33);
 }

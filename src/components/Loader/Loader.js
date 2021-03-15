@@ -6,7 +6,7 @@ export default function Spinner() {
     <div>
       <Loader
         type="Hearts"
-        color="#00BFFF"
+        color="#e91184"
         height={80}
         width={80}
         timeout={3000} //3 secs
