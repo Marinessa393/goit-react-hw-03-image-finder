@@ -1,12 +1,13 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Button({ fetchImages }) {
+export default function Button({ onClick }) {
   return (
-    <button type="button" onClick={fetchImages} className="Button">
+    <button type="button" onClick={onClick} className="Button">
       Load more...
     </button>
   );
 }
 Button.propTypes = {
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };

@@ -1,9 +1,8 @@
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-
 import Loader from 'react-loader-spinner';
 export default function Spinner() {
   return (
-    <div>
+    <div className="Loader">
       <Loader
         type="Hearts"
         color="#e91184"

@@ -1,27 +1,20 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function ImageGalleryItem({
-  tags,
-  src,
-  dataLargeImg,
-  openModal,
-}) {
-  return (
-    <li className="imageGalleryItem">
-      <img
-        onClick={openModal}
-        src={src}
-        alt={tags}
-        data-largeimg={dataLargeImg}
-        className="imageGalleryItem-image"
-      />
+export default function ImageGalleryItem({ images, onClick }) {
+  return images.map(({ id, webformatURL }) => (
+    <li className="ImageGalleryItem" key={id} onClick={() => onClick(id)}>
+      <img className="ImageGalleryItem-image" src={webformatURL} alt="" />
     </li>
-  );
+  ));
 }
 
 ImageGalleryItem.propTypes = {
-  src: PropTypes.string.isRequired,
-  tags: PropTypes.string.isRequired,
-  dataLargeImg: PropTypes.string.isRequired,
-  openModal: PropTypes.func,
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+    }),
+  ),
+  onClick: PropTypes.func.isRequired,
 };
