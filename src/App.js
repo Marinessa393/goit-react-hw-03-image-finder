@@ -60,7 +60,7 @@ class App extends Component {
         top: document.documentElement.scrollHeight,
         behavior: 'smooth',
       });
-    }, 500);
+    }, 400);
   };
 
   openImage = currentId => {
