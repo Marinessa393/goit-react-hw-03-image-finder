@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { fetchImages } from './components/Service/Img-API';
+import { fetchImages } from './Service/Img-API';
 import Searchbar from './components/Searchbar';
 import ImageGallery from './components/ImageGallery';
 import ImageGalleryItem from './components/ImageGalleryItem';
@@ -38,6 +38,7 @@ class App extends Component {
 
     fetchImages(this.state.searchQuery, this.state.currentPage)
       .then(fetchedImages => {
+        console.log(fetchedImages);
         if (fetchedImages.length === 0) {
           return this.setState({
             error: 'Oops, I can`t find any images...',
@@ -55,17 +56,15 @@ class App extends Component {
   };
 
   scrolling = () => {
-    setTimeout(() => {
-      window.scrollTo({
-        top: document.documentElement.scrollHeight,
-        behavior: 'smooth',
-      });
-    }, 400);
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
   };
 
-  openImage = currentId => {
-    const currentImg = this.state.images.find(image => image.id === currentId);
-    this.setState({ largeImage: currentImg.largeImageURL });
+  openImage = images => {
+    this.setState({ largeImage: images.largeImageURL });
+    console.log(this.state.largeImage);
     this.toggleModal();
   };
 
